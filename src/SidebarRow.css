@@ -4,6 +4,9 @@
     padding: 0px;
     cursor: pointer;
     gap: 15px;
+    margin-left: 5px;
+    
+    
     
 }
 
@@ -20,5 +23,6 @@
 }
 
 .sidebarRow >.MuiSvgIcon-root{
+    margin-left: 5px;
     color:  rgb(13, 74, 188);
 }

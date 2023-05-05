@@ -3,6 +3,7 @@ import './MessageSender.css'
 import React, { useState } from 'react'
 import CameraEnhanceIcon from '@mui/icons-material/CameraEnhance';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
+import {  InsertEmoticon } from '@mui/icons-material';
 
 
 
@@ -30,7 +31,7 @@ function MessageSender() {
                 <input value={input} onChange={(e) => setInput(e.target.value)}
                 className='MessageSender_input' type='text' placeholder="Feel free to express !! "/>
                 <input value={imageUrl} onChange={(e) => setImageUrl(e.target.value)} 
-                placeholder='imagae URL (Optional)' ></input>
+                placeholder='image URL (Optional)' ></input>
                 <button onClick={nosubmit} type='sumbit'>WALOU hh</button>
           </form>
         </div>
@@ -47,8 +48,8 @@ function MessageSender() {
               <h3>Photo/Video</h3> 
           </div> 
           <div className='MessageSender_option'> 
-              <AddPhotoAlternateIcon style={{color :'green'}}></AddPhotoAlternateIcon>
-              <h3>Photo/Video</h3> 
+              <InsertEmoticon style={{color :'yellow'}}></InsertEmoticon>
+              <h3>Humour/activity</h3> 
           </div> 
             
         </div>  

@@ -1,8 +1,9 @@
 .App{
     background-color: lightgray ;
-    height: 100vh;
+    height: 100%;
 }
 
 .App_body{
     display: flex;
+    
 }

@@ -4,6 +4,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { Avatar, IconButton } from '@mui/material';
+import NotificationsIcon from '@mui/icons-material/Notifications';
 
 function Header() {
   return (
@@ -20,6 +21,7 @@ function Header() {
         <div className='header_mid'>
           <HomeIcon className='option' sx={{ fontSize: 45 }}></HomeIcon>
           <OndemandVideoIcon className='option'sx={{ fontSize: 45 }}></OndemandVideoIcon>
+          <NotificationsIcon className='option'sx={{ fontSize: 45 }}></NotificationsIcon>
           <AddCircleIcon className='option' sx={{ fontSize: 45 }}></AddCircleIcon>
          </div>
 
