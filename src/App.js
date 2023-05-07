@@ -5,7 +5,7 @@ import Header from './Header';
 import Sidebar from './Sidebar';
 import Feed from './Feed';
 import Login from './Login';
-import Widget from './Widget';
+import Widget from './Contacts';
 
 
 
@@ -23,12 +23,13 @@ function App() {
         (
       <>
       <Header></Header>
-      <div className='App_body'>  
+      <div className='App_body'> 
+          
         <Sidebar></Sidebar>
         <Feed></Feed>
-        <Sidebar></Sidebar>
         <Widget></Widget>
-      </div> 
+        </div>
+      
       </>   
   )}
        
