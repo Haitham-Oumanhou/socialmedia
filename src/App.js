@@ -6,19 +6,18 @@ import Sidebar from './Sidebar';
 import Feed from './Feed';
 import Login from './Login';
 import Widget from './Contacts';
+import { useStateValue } from './StateProvider';
 
 
 
 function App() {
 
-  const user="tota" ;
+  const [{ user }, dispatch] = useStateValue();
 
-  
   return (
     
     <div className="App">
         
-
         {!user ?(<Login></Login>)  :
         (
       <>
