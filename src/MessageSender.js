@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import CameraEnhanceIcon from '@mui/icons-material/CameraEnhance';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import {  InsertEmoticon } from '@mui/icons-material';
+import { useStateValue } from './StateProvider';
 
 
 
@@ -11,6 +12,8 @@ import {  InsertEmoticon } from '@mui/icons-material';
 
 
 function MessageSender() {
+  
+  const [{user}, dispatched] = useStateValue();
 
   const [input,setInput] =useState("");
   const [imageUrl,setImageUrl] = useState("");
@@ -26,7 +29,7 @@ function MessageSender() {
   return (
     <div className='MessageSender'>
         <div className='MessageSender_top'>
-          <Avatar></Avatar>
+          <Avatar src ={user.photoURL}></Avatar>
            <form>
                 <input value={input} onChange={(e) => setInput(e.target.value)}
                 className='MessageSender_input' type='text' placeholder="Feel free to express !! "/>

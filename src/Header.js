@@ -5,8 +5,12 @@ import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { Avatar, IconButton } from '@mui/material';
 import NotificationsIcon from '@mui/icons-material/Notifications';
+import { useStateValue } from './StateProvider';
 
 function Header() {
+
+  const [{user}, dispatched] = useStateValue();
+  
   return (
     <div className='header'>
         
@@ -27,8 +31,8 @@ function Header() {
 
         <div className='header_right'>
           <div className='header_info'>
-            <Avatar sx={{ fontSize: 55 }} ></Avatar>
-            <h4>Ohio Citizen</h4>
+            <Avatar src={user.photoURL} sx={{ fontSize: 55 }} ></Avatar>
+            <h4>{user.displayName}</h4>
           </div>
           <IconButton >
             
