@@ -5,7 +5,10 @@ import CameraEnhanceIcon from '@mui/icons-material/CameraEnhance';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import {  InsertEmoticon } from '@mui/icons-material';
 import { useStateValue } from './StateProvider';
-
+import db from './firebase';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 
 
@@ -20,6 +23,16 @@ function MessageSender() {
   
   const nosubmit = (e)=>{
       e.preventDefault();
+       db.collection('posts').add(
+        {
+          message : input,
+          timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+          profilePic: user.photoURL,
+          username: user.displayName,
+          image: imageUrl,
+
+        }
+       )
       setInput("");
       setImageUrl("");
     }
