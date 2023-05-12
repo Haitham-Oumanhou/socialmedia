@@ -14,3 +14,4 @@ function SidebarRow({src , Icon, title}) {
 }
 
 export default SidebarRow;
+

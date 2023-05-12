@@ -6,10 +6,11 @@ function Friend({friendProfilePic , friendName }) {
   return (
     <div
     className='friend'>
-        {(friendProfilePic) ?<Avatar src={friendProfilePic}></Avatar> : <Avatar></Avatar> }
+        {(friendProfilePic) ? <Avatar src={friendProfilePic}></Avatar> : <Avatar></Avatar> }
         <p>{friendName}</p>
     </div>
   )
 }
 
 export default Friend
+
